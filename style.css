@@ -1,0 +1,414 @@
+/* custom styles */
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header */
+ 
+header{
+    height: 60px;
+}
+
+.container-header{
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    height:35px;
+}
+
+.main-nav{
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+}
+
+.main-nav li{
+    margin-left: 20px;
+    
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: #262626;
+    display: block;
+    font-weight: 100;
+    font-size: 15px;
+    
+
+}
+
+
+
+.right-nav{
+    display: flex;
+}
+
+.right-nav li{
+    margin-left: 20px;
+    list-style: none;
+}
+
+.right-nav li:nth-of-type(3){
+    display: none;
+}
+
+.right-nav li i{
+    color: #262626;
+}
+/* Content */
+.container-content{
+    width: 80%;
+    margin: 0 auto;
+    
+    
+    display: grid;
+    gap: 40px;
+}
+
+/* Banner */
+.banner{
+    background: url('./images/slide1.png') no-repeat center center/cover;
+    width: 100%;
+    height: 400px;
+    padding-top:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn{
+    background: #262626;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* News */
+.news{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.article img{
+    width: 100%;
+}
+
+.article h2{
+    color: #000;
+    font-size: 17px;
+}
+
+.article p{
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.article a{
+    color: #0067b8;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.article{
+    display: grid;
+    row-gap: 10px;
+}
+
+/* Xbox Section */
+.xbox-section{
+    background: white url("./images/xbox.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:300px;
+    padding: 50px 0px 0px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.xbox-section p{
+    width: 400px;
+    line-height: 1.5;
+    font-size:15px;
+}
+
+/* Carbon Section */
+.carbon{
+    background: white url("./images/carbon.jpg");
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+
+}
+
+.carbon h2{
+    color: white;
+}
+
+.carbon p{
+    color: white;
+    font-size: 15px;
+    width: 500px;
+    line-height: 1.5;
+}
+
+.carbon a{
+    background: white;
+    color: #262626;
+}
+
+/* Share section */
+.shareSection{
+    display:flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.shareSection ul{
+    list-style:none;
+    
+    display: flex;
+    gap: 10px;
+}
+
+/* footer main */
+
+.footer-main{
+    
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
+
+.footer-main ul li:nth-of-type(1){
+    color: #262626;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.footer-main ul li{
+    list-style:none;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* Footer bottom */
+.footer-bottom{
+    padding: 50px 0px;
+}
+
+.footer-bottom ul{
+    list-style:none;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.footer-bottom ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-bottom ul li:nth-of-type(1) i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1000px){
+
+    .news{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .right-nav li:nth-child(3){
+        display: block;
+    }
+
+    .main-nav{
+        justify-content: center;
+        width: 100%;
+    }    
+
+    header{
+        height: 100px;
+    }
+
+    .container-header{
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+.container-content{
+    width: 90%;
+    
+}
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .footer-main{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .news{
+        grid-template-columns: 1fr;
+    }
+
+    
+
+    .container-content{
+        text-align: center;
+    }
+
+    .xbox-section p{
+        display: none;
+    }
+
+    .xbox-section{
+        padding: 0px;
+        height: 100px;
+        background: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carbon{
+        height: 100px;
+        background: none;
+        align-items: center;
+        
+    }
+
+    .carbon h2{
+        color: black;
+    }
+
+    .carbon p{
+        color: black;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px){
+
+    .container-content{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .banner{
+        background: none;
+        padding: 50px 0px 0px 0px;
+        margin: 0px;
+        height: 200px;
+
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .article img{
+        width: 50%;
+    }
+
+    .article{
+        width: 90%;
+    }
+
+    .article{
+        justify-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-bottom{
+        padding: 50px 50px;
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    .article{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .main-nav{
+        display: none;
+    }
+
+    header{
+        height: 80px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 350px){
+    .article img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .article{
+        width: 50%;
+    }
+
+    .article p{
+        display: none;
+    }
+}
